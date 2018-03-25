@@ -1,1 +1,1 @@
-include ':arch-sample-app', ':arch-presenter', ':arch-domain'
+include ':arch-sample-app', ':arch-presenter', ':arch-domain', ':arch-domain-rx'

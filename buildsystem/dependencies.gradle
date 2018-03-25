@@ -10,6 +10,7 @@ ext {
     okhttp3Version = "3.9.1"
     daggerVersion = "2.14.1"
     retrofitConverterVersion = "2.3.0"
+    rxJavaVersion = "2.1.8"
 
     junitVersion = "4.12"
     espressoVersion = "2.2.2"
@@ -39,11 +40,27 @@ ext {
     ]
 
     archPresenterLibs = [
-            supportAppCompat    : "com.android.support:appcompat-v7:${appCompatVersion}"
+            supportAppCompat: "com.android.support:appcompat-v7:${appCompatVersion}"
     ]
 
     archPresenterTest = [
-            junit        : "junit:junit:${junitVersion}",
-            mockito      : "org.mockito:mockito-core:${mockitoVersion}"
+            junit  : "junit:junit:${junitVersion}",
+            mockito: "org.mockito:mockito-core:${mockitoVersion}"
+    ]
+
+    archDomainLibs = [
+
+    ]
+
+    archDomainTest = [
+
+    ]
+
+    archDomainRxLibs = [
+            rxJava: "io.reactivex.rxjava2:rxjava:${rxJavaVersion}"
+    ]
+
+    archDomainRxTest = [
+
     ]
 }
