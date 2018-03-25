@@ -1,0 +1,2 @@
+# TODOs
+* Add application icon
