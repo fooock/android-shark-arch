@@ -1,10 +1,12 @@
 package com.fooock.sharkarch.presenter;
 
+import android.support.annotation.MainThread;
 import android.support.annotation.StringRes;
 
 /**
  * Base class used when the view needs to make async operations
  */
+@MainThread
 public interface BaseAsyncView<T> extends BaseView {
 
     /**

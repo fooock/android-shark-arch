@@ -1,12 +1,14 @@
 package com.fooock.sharkarch.presenter;
 
 import android.support.annotation.CallSuper;
+import android.support.annotation.MainThread;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 /**
  * Base class for all presenters
  */
+@MainThread
 public abstract class BasePresenter<V extends BaseView> {
 
     private V mView;
