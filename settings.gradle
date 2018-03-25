@@ -1,1 +1,1 @@
-include ':app', ':arch-presenter'
+include ':arch-sample-app', ':arch-presenter'
