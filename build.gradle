@@ -9,9 +9,10 @@ buildscript {
         maven {
             url "https://maven.google.com"
         }
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.1.0'
         classpath 'com.google.gms:oss-licenses:0.9.1'
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -33,7 +34,7 @@ subprojects {
     apply from: "$rootProject.projectDir/quality/quality.gradle"
 
     afterEvaluate {
-        check.dependsOn 'checkstyle', 'findbugs', 'pmd', 'lint'
+        check.dependsOn 'checkstyle', 'findbugs', 'pmd'
    }
 }
 
