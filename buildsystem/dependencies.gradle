@@ -53,7 +53,7 @@ ext {
     ]
 
     archDomainTest = [
-
+            junit  : "junit:junit:${junitVersion}"
     ]
 
     archDomainRxLibs = [
@@ -61,6 +61,7 @@ ext {
     ]
 
     archDomainRxTest = [
-
+            junit  : "junit:junit:${junitVersion}",
+            mockito: "org.mockito:mockito-core:${mockitoVersion}"
     ]
 }

@@ -5,6 +5,9 @@ dependencies {
     implementation project(':arch-domain')
 
     implementation rootProject.ext.archDomainRxLibs.rxJava
+
+    testImplementation rootProject.ext.archDomainRxTest.junit
+    testImplementation rootProject.ext.archDomainRxTest.mockito
 }
 
 sourceCompatibility = "1.7"
