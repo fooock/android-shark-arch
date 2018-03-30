@@ -24,7 +24,7 @@ public abstract class BaseObservableInteractor<P, R> extends BaseRxInteractor<P,
      * @param observer Abstract observer
      * @param params   Parameters for this interactor
      */
-    public void execute(DisposableObserver<R> observer, P params) {
+    public final void execute(DisposableObserver<R> observer, P params) {
         Observable<R> obs = build(params).observeOn(mMainThread.get())
                 .subscribeOn(mThreadExecutor.get());
         addDisposable(obs.subscribeWith(observer));
