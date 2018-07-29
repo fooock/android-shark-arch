@@ -2,15 +2,14 @@ apply plugin: 'checkstyle'
 apply plugin: 'findbugs'
 apply plugin: 'pmd'
 
-def isJava = plugins.hasPlugin('java')
+def isJava = project.name == "arch-domain" || project.name == "arch-domain-rx"
 
 checkstyle {
     toolVersion '7.8.2'
 
     configFile file("${project.rootDir}/quality/checkstyle/checkstyle.xml")
     configProperties.checkstyleSuppressionFilterPath = file(
-            "${project.rootDir}/quality/checkstyle/suppressions.xml")
-            .absolutePath
+            "${project.rootDir}/quality/checkstyle/suppressions.xml").absolutePath
 }
 
 task checkstyle(type: Checkstyle, group: 'verification') {
@@ -23,7 +22,6 @@ task checkstyle(type: Checkstyle, group: 'verification') {
     exclude '**/BuildConfig.java'
     classpath = files()
 }
-
 
 findbugs {
     toolVersion = "3.0.1"
@@ -54,10 +52,8 @@ task findbugs(type: FindBugs, dependsOn: "assemble", group: 'verification') {
             destination file("$projectDir.absolutePath/build/reports/findbugs/findbugs.html")
         }
     }
-
     classpath = files()
 }
-
 
 pmd {
     toolVersion = '6.0.0'
